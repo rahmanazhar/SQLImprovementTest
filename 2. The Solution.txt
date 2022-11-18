@@ -1,0 +1,10 @@
+Logical solutions to current query:
+    - The renaming of columns is unnecessary
+    - Joining unused table is unnecessary and it is contributing to longer time query because of the SELECT doesn't require the table to be output.
+    - Using multiple WHERE conditions causes the query taking longer time, especially when using the LIKE '%%' operator that require to scan all the data tables.
+    - Using multiple WHERE conditions on unused joined table is unnecessary.
+    - Using conditions on INNER JOIN table instead of combining with the main table condition query
+
+SQL Solutions
+
+The solution is presented in the the_solution.sql file.
